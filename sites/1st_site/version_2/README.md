@@ -74,8 +74,8 @@ npm run build
 
 **Илья Legenda**
 
-- VK: [legenda1ru1](https://vk.com/legenda1ru1)
-- Телефон: +79223385488
+- Telegram: [Legenda_CR](https://t.me/Legenda_CR)
+- Почта: legenda.devops@gmail.com
 
 ## 📄 Лицензия
 
