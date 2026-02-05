@@ -19,24 +19,24 @@ function Footer() {
           <p>
             Разработчик: 
             <a 
-              href="https://vk.com/legenda1ru1" 
+              href="https://t.me/legenda_cr" 
               target="_blank" 
               rel="noopener noreferrer"
               className="footer-link"
             >
-              Илья Legenda
+              Ilya Matveevsky
             </a>
           </p>
-          <p>Контактный телефон: +79223385488</p>
+          <p>Контактная почта: legenda.devops@gmail.com</p>
           <p>
-            Я в вк: 
+            VK: 
             <a 
-              href="https://vk.com/legenda1ru1" 
+              href="https://vk.com/legenda_crx" 
               target="_blank" 
               rel="noopener noreferrer"
               className="footer-link"
             >
-              Илья Матвеевский
+              Ilya Matveevsky
             </a>
           </p>
         </div>

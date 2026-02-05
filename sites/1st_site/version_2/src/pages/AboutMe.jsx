@@ -25,7 +25,7 @@ function AboutMe() {
                 <p>
                   Telegram: 
                   <a 
-                    href="https://t.me/Legenda_1Cr" 
+                    href="https://t.me/Legenda_Cr" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="contact-link"
@@ -36,7 +36,7 @@ function AboutMe() {
                 <p>
                   VK: 
                   <a 
-                    href="https://vk.com/legenda1ru1" 
+                    href="https://vk.com/legenda_crx" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="contact-link"

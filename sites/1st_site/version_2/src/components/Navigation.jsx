@@ -87,7 +87,7 @@ function Navigation() {
               </li>
               <li>
                 <a 
-                  href="https://vk.com/legenda1ru1" 
+                  href="https://vk.com/legenda_crx" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="dropdown-link"
