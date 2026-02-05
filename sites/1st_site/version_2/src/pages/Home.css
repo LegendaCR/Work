@@ -1,0 +1,122 @@
+.home-page {
+  width: 100%;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.main-content-area {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  padding: 50px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.main-content-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    var(--primary-color) 0%, 
+    var(--secondary-color) 50%, 
+    var(--primary-color) 100%);
+  opacity: 0.6;
+}
+
+.game-info {
+  margin-top: 40px;
+}
+
+.game-info h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 35px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--text-light) 0%, var(--text-muted) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.game-info h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
+}
+
+.info-text {
+  color: var(--text-light);
+  line-height: 1.9;
+}
+
+.info-text p {
+  margin-bottom: 25px;
+  text-align: justify;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: var(--border-radius-sm);
+  border-left: 3px solid var(--primary-color);
+  transition: var(--transition);
+}
+
+.info-text p:hover {
+  background: rgba(15, 23, 42, 0.7);
+  border-left-color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content-area {
+    padding: 30px 20px;
+  }
+  
+  .game-info h2 {
+    font-size: 1.8rem;
+  }
+  
+  .info-text p {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,110 @@
+.image-slider {
+  width: 100%;
+  margin-bottom: 40px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  border: 1px solid var(--border-color);
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  background: var(--bg-darker);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  filter: brightness(0.9) contrast(1.1);
+  transition: filter 0.5s ease;
+}
+
+.slide.active img {
+  filter: brightness(1) contrast(1);
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.9) 100%);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.slider-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: rgba(148, 163, 184, 0.3);
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+  position: relative;
+}
+
+.slider-dot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.slider-dot:hover {
+  border-color: var(--primary-light);
+  transform: scale(1.2);
+}
+
+.slider-dot:hover::before {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.slider-dot.active {
+  background: var(--primary-color);
+  border-color: var(--primary-light);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.6);
+  transform: scale(1.3);
+}
+
+.slider-dot.active::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    height: 300px;
+  }
+}

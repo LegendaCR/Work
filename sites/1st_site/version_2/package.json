@@ -1,22 +1,27 @@
 {
-  "name": "legendcompany",
-  "version": "1.0.0",
-  "description": "the legenda company website",
-  "main": "index.js",
+  "name": "clash-royale-website",
+  "version": "2.0.0",
+  "description": "Modern Clash Royale website built with React",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server.js",
+    "start:prod": "PORT=3000 node server.js",
+    "kill:3000": "lsof -ti:3000 | xargs kill -9 2>/dev/null || echo 'No process on port 3000'"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Legenda1cr/Legendcompany.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Legenda1cr/Legendcompany/issues"
-  },
-  "Главнаяpage": "https://github.com/Legenda1cr/Legendcompany#readme",
   "dependencies": {
-    "express": "^4.20.0"
-  }
+    "express": "^4.20.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^7.3.1"
+  },
+  "author": "Илья Legenda",
+  "license": "ISC"
 }
