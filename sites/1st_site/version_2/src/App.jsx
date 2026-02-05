@@ -9,11 +9,9 @@ import PlayerProfile from './pages/PlayerProfile'
 
 function App() {
   // Для GitHub Pages используем basename, для локальной разработки - нет
-  // Проверяем base path из vite.config.js через import.meta.env.BASE
-  // BASE будет '/Work/1st_site/version_2/' для деплоя или '/' для локального запуска
-  const basename = import.meta.env.BASE && import.meta.env.BASE !== '/' 
-    ? import.meta.env.BASE.replace(/\/$/, '') // Убираем trailing slash
-    : ''
+  // В production всегда используем basename для GitHub Pages
+  // В development basename всегда пустой
+  const basename = import.meta.env.PROD ? '/Work/1st_site/version_2' : ''
   
   return (
     <Router basename={basename}>
