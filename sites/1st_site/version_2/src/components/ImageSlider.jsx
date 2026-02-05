@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react'
 import './ImageSlider.css'
 
+const baseUrl = import.meta.env.BASE_URL || ''
+
 const images = [
-  '/allimeges/brice-t.jpg',
-  '/allimeges/1587647577_11-p-foni-iz-klesh-royal-19.jpg',
-  '/allimeges/skachat-foto-kartinki5.jpg',
-  '/allimeges/рряль.jpg',
-  '/allimeges/maxresdefault.jpg',
-  '/allimeges/thu67.jpg'
+  `${baseUrl}allimeges/brice-t.jpg`,
+  `${baseUrl}allimeges/1587647577_11-p-foni-iz-klesh-royal-19.jpg`,
+  `${baseUrl}allimeges/skachat-foto-kartinki5.jpg`,
+  `${baseUrl}allimeges/рряль.jpg`,
+  `${baseUrl}allimeges/maxresdefault.jpg`,
+  `${baseUrl}allimeges/thu67.jpg`
 ]
 
 function ImageSlider() {

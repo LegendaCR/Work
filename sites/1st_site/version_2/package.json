@@ -4,10 +4,15 @@
   "description": "Modern Clash Royale website built with React",
   "private": true,
   "type": "module",
+  "homepage": "https://legendacr.github.io/Work/1st_site/version_2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:deploy": "VITE_BASE_PATH=/Work/1st_site/version_2/ vite build",
     "preview": "vite preview",
+    "predeploy": "npm run build:deploy && npm run prepare-deploy",
+    "prepare-deploy": "node scripts/prepare-deploy.js",
+    "deploy": "gh-pages -d deploy-dist",
     "start": "node server.js",
     "start:prod": "PORT=3000 node server.js",
     "kill:3000": "lsof -ti:3000 | xargs kill -9 2>/dev/null || echo 'No process on port 3000'"
@@ -20,6 +25,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.3.0",
     "vite": "^7.3.1"
   },
   "author": "Илья Legenda",

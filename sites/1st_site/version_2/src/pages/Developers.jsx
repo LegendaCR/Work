@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react'
 import './Developers.css'
 
+const baseUrl = import.meta.env.BASE_URL || ''
+
 const developerImages = [
-  '/allimeges/Update_6.jpg',
-  '/allimeges/for-the-planet-alliance.jpg',
-  '/allimeges/Games-4.jpg',
-  '/allimeges/maxrult.jpg',
-  '/allimeges/Update_6.jpg',
-  '/allimeges/3.jpg'
+  `${baseUrl}allimeges/Update_6.jpg`,
+  `${baseUrl}allimeges/for-the-planet-alliance.jpg`,
+  `${baseUrl}allimeges/Games-4.jpg`,
+  `${baseUrl}allimeges/maxrult.jpg`,
+  `${baseUrl}allimeges/Update_6.jpg`,
+  `${baseUrl}allimeges/3.jpg`
 ]
 
 function Developers() {

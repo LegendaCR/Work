@@ -110,11 +110,11 @@
 
 @media (max-width: 768px) {
   .main-content-area {
-    padding: 30px 20px;
+    padding: 30px 10px;
   }
   
   .videos-section h2 {
-    font-size: 1.8rem;
+    font-size: 14px;
   }
   
   .video-item iframe {

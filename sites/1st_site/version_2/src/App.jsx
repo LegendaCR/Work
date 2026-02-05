@@ -8,8 +8,15 @@ import TopYouTubers from './pages/TopYouTubers'
 import PlayerProfile from './pages/PlayerProfile'
 
 function App() {
+  // Для GitHub Pages используем basename, для локальной разработки - нет
+  // Проверяем base path из vite.config.js через import.meta.env.BASE
+  // BASE будет '/Work/1st_site/version_2/' для деплоя или '/' для локального запуска
+  const basename = import.meta.env.BASE && import.meta.env.BASE !== '/' 
+    ? import.meta.env.BASE.replace(/\/$/, '') // Убираем trailing slash
+    : ''
+  
   return (
-    <Router>
+    <Router basename={basename}>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

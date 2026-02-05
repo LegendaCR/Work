@@ -148,20 +148,20 @@
 
 @media (max-width: 768px) {
   .main-content-area {
-    padding: 30px 20px;
+    padding: 30px 10px;
   }
   
   .player-header h2 {
-    font-size: 2rem;
+    font-size: 14px;
   }
   
   .player-description p {
-    font-size: 1rem;
+    font-size: 12px;
     padding: 20px;
   }
   
   .youtube-channel-link {
     padding: 14px 28px;
-    font-size: 1rem;
+    font-size: 12px;
   }
 }

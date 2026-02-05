@@ -97,6 +97,19 @@ body::after {
   }
   
   .main-content {
-    padding: 10px;
+    padding: 0 5px;
+    font-size: 12px;
+  }
+  
+  .main-content h2 {
+    font-size: 15px !important;
+  }
+  
+  .main-content p,
+  .main-content span,
+  .main-content div,
+  .main-content li,
+  .main-content a {
+    font-size: 12px;
   }
 }
